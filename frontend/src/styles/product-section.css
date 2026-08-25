@@ -1,0 +1,36 @@
+.product-section {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.product-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.product-section-header h2 {
+  font-size: 22px;
+}
+
+.product-section-header button {
+  border: none;
+  background: none;
+  color: #0c831f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

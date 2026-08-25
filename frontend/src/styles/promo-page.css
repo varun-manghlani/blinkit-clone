@@ -1,0 +1,216 @@
+.promo-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 60px;
+}
+
+/* ==========================================
+   BACK
+========================================== */
+
+.promo-back-button {
+  border: none;
+  background: transparent;
+  color: #0aad45;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.promo-back-button:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.promo-page-header {
+  margin-bottom: 25px;
+}
+
+.promo-page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #222;
+}
+
+.promo-page-header p {
+  margin-top: 8px;
+  color: #777;
+}
+
+/* ==========================================
+   PRODUCT GRID
+========================================== */
+
+.promo-products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.promo-product-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.promo-product-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.promo-product-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.promo-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================
+   DELIVERY
+========================================== */
+
+.promo-delivery {
+  margin: 12px 0 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ==========================================
+   PRODUCT NAME
+========================================== */
+
+.promo-product-card h3 {
+  margin: 0;
+  min-height: 44px;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #222;
+}
+
+/* ==========================================
+   QUANTITY
+========================================== */
+
+.promo-quantity {
+  margin: 10px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ==========================================
+   PRICE + ADD
+========================================== */
+
+.promo-product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.promo-product-bottom strong {
+  font-size: 17px;
+  color: #222;
+}
+
+.promo-product-bottom button {
+  border: 1px solid #0aad45;
+  background: #fff;
+  color: #0aad45;
+  padding: 8px 18px;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.promo-product-bottom button:hover {
+  background: #0aad45;
+  color: #fff;
+}
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+.promo-page-message {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.promo-page-message h2 {
+  margin-bottom: 10px;
+}
+
+.promo-page-message p {
+  color: #777;
+}
+
+.promo-page-message button {
+  margin-top: 15px;
+  border: none;
+  background: #0aad45;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+  .promo-products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .promo-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .promo-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-product-image {
+    height: 160px;
+  }
+}

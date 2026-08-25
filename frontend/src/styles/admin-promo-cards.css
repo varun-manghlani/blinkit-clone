@@ -1,0 +1,687 @@
+.admin-promo-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+  padding: 40px 50px 80px;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.admin-promo-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.admin-promo-header h1 {
+  margin: 12px 0 6px;
+  font-size: 34px;
+  color: #222;
+}
+
+.admin-promo-header p {
+  margin: 0;
+  color: #777;
+  font-size: 16px;
+}
+
+.admin-back-button {
+  border: none;
+  background: transparent;
+  color: #078d35;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.admin-add-promo-button {
+  border: none;
+  background: #0aad45;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.admin-add-promo-button:hover {
+  background: #07963b;
+}
+
+/* ==========================================
+   MESSAGES
+========================================== */
+
+.admin-promo-error,
+.admin-promo-success {
+  padding: 13px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-promo-error {
+  background: #fff0f0;
+  color: #c62828;
+  border: 1px solid #ffcaca;
+}
+
+.admin-promo-success {
+  background: #edf9f1;
+  color: #087f32;
+  border: 1px solid #bce8c9;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.promo-form-card {
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.promo-form-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.promo-form-header h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: #222;
+}
+
+.promo-form-header p {
+  margin: 0;
+  color: #777;
+}
+
+.promo-close-button {
+  border: none;
+  background: #f2f2f2;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #555;
+  cursor: pointer;
+}
+
+.promo-close-button:hover {
+  background: #e8e8e8;
+}
+
+/* ==========================================
+   FORM SECTIONS
+========================================== */
+
+.promo-form-section {
+  margin-bottom: 25px;
+}
+
+.promo-form-section > label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+.promo-form-section small {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+}
+
+.promo-form-section input,
+.product-search-wrapper input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  padding: 13px 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.promo-form-section input:focus,
+.product-search-wrapper input:focus {
+  border-color: #0aad45;
+  box-shadow: 0 0 0 3px rgba(10, 173, 69, 0.08);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.promo-image-upload {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promo-image-preview,
+.promo-image-placeholder {
+  width: 360px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.promo-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  color: #999;
+  font-size: 14px;
+}
+
+.promo-file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border: 1px solid #d5d5d5;
+  color: #333;
+  padding: 11px 17px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.promo-file-button:hover {
+  background: #e8e8e8;
+}
+
+/* ==========================================
+   PRODUCTS
+========================================== */
+
+.promo-products-section {
+  border-top: 1px solid #eeeeee;
+  padding-top: 25px;
+}
+
+.promo-products-heading {
+  margin-bottom: 15px;
+}
+
+.promo-products-heading h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.promo-products-heading p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ==========================================
+   SELECTED PRODUCTS
+========================================== */
+
+.selected-products {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.selected-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 12px;
+  background: #f8faf8;
+  border: 1px solid #e2e9e3;
+  border-radius: 8px;
+}
+
+.selected-product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.selected-product-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.selected-product-info strong {
+  display: block;
+  color: #222;
+  font-size: 14px;
+}
+
+.selected-product-info span {
+  display: block;
+  color: #666;
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.remove-product-button {
+  border: none;
+  background: transparent;
+  color: #d32f2f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove-product-button:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.product-search-wrapper {
+  margin-top: 15px;
+}
+
+.product-search-results {
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+}
+
+.product-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.product-result:last-child {
+  border-bottom: none;
+}
+
+.product-result-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.product-result-info img {
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.product-result-info strong {
+  display: block;
+  color: #222;
+  font-size: 14px;
+}
+
+.product-result-info span {
+  display: block;
+  color: #666;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.product-add-button,
+.product-added-button {
+  min-width: 70px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.product-add-button {
+  border: 1px solid #0aad45;
+  color: #078d35;
+  background: white;
+  cursor: pointer;
+}
+
+.product-add-button:hover {
+  background: #effbf3;
+}
+
+.product-added-button {
+  border: 1px solid #ddd;
+  color: #999;
+  background: #f5f5f5;
+  cursor: default;
+}
+
+.product-search-message {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+
+/* ==========================================
+   FORM ACTIONS
+========================================== */
+
+.promo-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #eeeeee;
+}
+
+.promo-cancel-button,
+.promo-save-button {
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.promo-cancel-button {
+  border: 1px solid #d5d5d5;
+  background: white;
+  color: #444;
+}
+
+.promo-save-button {
+  border: none;
+  background: #0aad45;
+  color: white;
+}
+
+.promo-save-button:hover {
+  background: #07963b;
+}
+
+/* ==========================================
+   PROMO CARDS LIST
+========================================== */
+
+.promo-cards-section {
+  margin-top: 10px;
+}
+
+.promo-cards-title {
+  margin-bottom: 20px;
+}
+
+.promo-cards-title h2 {
+  margin: 0 0 5px;
+  color: #222;
+  font-size: 24px;
+}
+
+.promo-cards-title p {
+  margin: 0;
+  color: #777;
+}
+
+.promo-card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(330px, 1fr)
+  );
+  gap: 22px;
+}
+
+.admin-promo-card {
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
+}
+
+.admin-promo-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: #eee;
+}
+
+.admin-promo-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.promo-active-badge,
+.promo-inactive-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.promo-active-badge {
+  background: #e8f8ee;
+  color: #087f32;
+}
+
+.promo-inactive-badge {
+  background: #f4f4f4;
+  color: #777;
+}
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.admin-promo-details {
+  padding: 17px 18px;
+}
+
+.promo-detail-row {
+  margin-bottom: 12px;
+}
+
+.promo-detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.promo-detail-row span {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.promo-detail-row strong {
+  display: block;
+  color: #222;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* ==========================================
+   PRODUCT CHIPS
+========================================== */
+
+.promo-product-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 18px 16px;
+}
+
+.promo-product-chip,
+.promo-more-chip {
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.promo-product-chip {
+  background: #f1f7f2;
+  color: #24783f;
+}
+
+.promo-more-chip {
+  background: #f1f1f1;
+  color: #666;
+}
+
+/* ==========================================
+   CARD ACTIONS
+========================================== */
+
+.admin-promo-actions {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px;
+  border-top: 1px solid #eeeeee;
+}
+
+.promo-edit-button,
+.promo-delete-button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.promo-edit-button {
+  border: 1px solid #0aad45;
+  color: #078d35;
+  background: white;
+}
+
+.promo-edit-button:hover {
+  background: #effbf3;
+}
+
+.promo-delete-button {
+  border: 1px solid #e0b5b5;
+  color: #c62828;
+  background: white;
+}
+
+.promo-delete-button:hover {
+  background: #fff3f3;
+}
+
+/* ==========================================
+   EMPTY / LOADING
+========================================== */
+
+.promo-loading {
+  padding: 60px;
+  text-align: center;
+  color: #777;
+}
+
+.promo-empty {
+  background: white;
+  border: 1px dashed #d5d5d5;
+  border-radius: 12px;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.promo-empty-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.promo-empty h3 {
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.promo-empty p {
+  color: #777;
+  margin: 0 0 20px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+  .admin-promo-page {
+    padding: 25px 20px 60px;
+  }
+
+  .admin-promo-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .promo-image-preview,
+  .promo-image-placeholder {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .promo-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .promo-form-card {
+    padding: 20px;
+  }
+
+  .promo-form-actions {
+    flex-direction: column;
+  }
+
+  .promo-cancel-button,
+  .promo-save-button {
+    width: 100%;
+  }
+
+  .selected-product {
+    align-items: flex-start;
+  }
+
+  .selected-product-info {
+    min-width: 0;
+  }
+
+  .selected-product-info strong {
+    word-break: break-word;
+  }
+}

@@ -1,0 +1,73 @@
+.home {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 40px 60px;
+  box-sizing: border-box;
+}
+
+.home h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.home p {
+  color: #666;
+  font-size: 18px;
+}
+
+/* Keep everything inside the same homepage width */
+
+.home > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-products-loading,
+.home-products-error,
+.home-empty-products {
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: #666;
+}
+
+.home-products-error button {
+  border: none;
+  background: #0aad4b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.home-products-error button:hover {
+  background: #079b42;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .home {
+    padding: 25px 20px 50px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .home {
+    padding: 20px 12px 40px;
+  }
+}

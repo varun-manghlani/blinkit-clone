@@ -1,0 +1,42 @@
+.hero-banner {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 35px auto 30px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  box-sizing: border-box;
+}
+
+.hero-banner img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .hero-banner {
+    width: calc(100% - 30px);
+
+    margin: 20px auto;
+
+    border-radius: 10px;
+  }
+
+  .hero-banner img {
+    border-radius: 10px;
+  }
+}

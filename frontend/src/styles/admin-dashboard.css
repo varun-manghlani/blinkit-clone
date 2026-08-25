@@ -1,0 +1,269 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+
+.admin-page-title {
+  margin-bottom: 25px;
+}
+
+
+.admin-page-title h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #222;
+}
+
+
+.admin-page-title p {
+  margin: 5px 0 0;
+
+  color: #888;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   STAT CARDS
+========================================== */
+
+.dashboard-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 25px;
+}
+
+
+.dashboard-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background: white;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 12px;
+}
+
+
+.dashboard-stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eaf8ef;
+
+  font-size: 20px;
+}
+
+
+.dashboard-stat-card p {
+  margin: 0 0 4px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+.dashboard-stat-card h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 23px;
+}
+
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.dashboard-section {
+  margin-bottom: 25px;
+
+  padding: 22px;
+
+  background: white;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 12px;
+}
+
+
+.dashboard-section-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.dashboard-section-header h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 18px;
+}
+
+
+.dashboard-section-header button {
+  border: none;
+
+  background: transparent;
+
+  color: #0aad4b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   ORDER OVERVIEW
+========================================== */
+
+.order-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 12px;
+}
+
+
+.order-overview-grid > div {
+  padding: 18px;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 9px;
+
+  text-align: center;
+}
+
+
+.order-overview-grid span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+.order-overview-grid strong {
+  color: #222;
+
+  font-size: 22px;
+}
+
+
+/* ==========================================
+   EMPTY ORDERS
+========================================== */
+
+.empty-orders {
+  padding: 45px 20px;
+
+  text-align: center;
+}
+
+
+.empty-orders-icon {
+  font-size: 35px;
+
+  margin-bottom: 10px;
+}
+
+
+.empty-orders h3 {
+  margin: 0 0 5px;
+
+  color: #333;
+
+  font-size: 16px;
+}
+
+
+.empty-orders p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .dashboard-stats {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .order-overview-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .dashboard-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .order-overview-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .order-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}

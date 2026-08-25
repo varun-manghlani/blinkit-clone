@@ -1,0 +1,333 @@
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.login-modal {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px 44px 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-back {
+  position: absolute;
+  left: 28px;
+  top: 25px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #222;
+}
+
+.login-logo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  background: #ffd43b;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 800;
+  color: #111;
+}
+
+.login-modal h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #222;
+}
+
+.login-heading {
+  margin: 8px 0 28px;
+  font-size: 20px;
+  color: #444;
+}
+
+.login-input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.login-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-input-group input {
+  width: 100%;
+  height: 54px;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 16px;
+  outline: none;
+  background: #ffffff;
+  color: #222222
+}
+
+.login-input-group input:focus {
+  border-color: #888;
+}
+
+.mobile-input {
+  display: flex;
+  height: 54px;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mobile-input span {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background: #fafafa;
+}
+
+.mobile-input input {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.login-error {
+  margin: 8px 0 14px;
+  color: #d93025;
+  font-size: 14px;
+}
+
+.login-continue {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: #0c831f;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.login-continue:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.login-terms {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.login-terms span {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   OTP MODAL
+   ========================================== */
+
+/* ==========================================
+   OTP MODAL
+   ========================================== */
+
+.otp-modal {
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.otp-title {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.otp-content {
+  padding: 40px 50px 45px;
+  background: #ffffff;
+}
+
+.otp-message {
+  margin: 0 0 8px;
+  color: #666666;
+  font-size: 16px;
+}
+
+.otp-phone {
+  display: block;
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+
+/* OTP boxes */
+
+.otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.otp-box {
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #222222;
+
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.otp-box::placeholder {
+  color: #999999;
+}
+
+.otp-box:focus {
+  border: 2px solid #0c831f;
+  background: #ffffff;
+}
+
+
+/* Development OTP */
+
+.development-otp {
+  margin: 12px 0 20px;
+
+  font-size: 16px;
+  color: #555555;
+
+  text-align: center;
+}
+
+.development-otp strong {
+  color: #e00000;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+
+/* Error */
+
+.otp-error {
+  margin: 0 0 15px;
+
+  color: #d93025;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+
+/* Verify button */
+
+.verify-button {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #0c831f;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.verify-button:hover:not(:disabled) {
+  background: #087319;
+}
+
+.verify-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* Resend */
+
+.resend-button {
+  border: none;
+  background: transparent;
+
+  margin-top: 22px;
+
+  font-size: 15px;
+  color: #777777;
+
+  cursor: pointer;
+}
+
+.resend-button:disabled {
+  color: #bbbbbb;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .login-modal {
+    max-width: 95%;
+    padding: 25px 22px 20px;
+  }
+
+  .login-modal h1 {
+    font-size: 24px;
+  }
+
+  .otp-content {
+    padding: 35px 20px;
+  }
+
+  .otp-boxes {
+    gap: 7px;
+  }
+
+  .otp-box {
+    width: 45px;
+    height: 52px;
+  }
+}

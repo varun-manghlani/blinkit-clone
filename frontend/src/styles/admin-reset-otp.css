@@ -1,0 +1,202 @@
+.admin-reset-otp-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f7f7f7;
+
+  box-sizing: border-box;
+}
+
+.admin-reset-otp-card {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 42px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.admin-reset-otp-logo {
+  color: #0aad4b;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+.admin-reset-otp-card h1 {
+  margin: 0 0 10px;
+
+  color: #222;
+
+  font-size: 28px;
+}
+
+.admin-reset-otp-subtitle {
+  margin: 0 0 6px;
+
+  color: #777;
+
+  font-size: 15px;
+}
+
+.admin-reset-otp-email {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #333;
+
+  font-size: 15px;
+
+  word-break: break-word;
+}
+
+
+/* OTP boxes */
+
+.otp-inputs {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 48px;
+  height: 54px;
+
+  border: 1px solid #d5d5d5;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #222;
+
+  box-sizing: border-box;
+}
+
+.otp-inputs input:focus {
+  border-color: #0aad4b;
+
+  box-shadow:
+    0 0 0 3px rgba(10, 173, 75, 0.1);
+}
+
+
+/* Demo OTP */
+
+.demo-otp {
+  margin: 18px 0;
+
+  font-size: 15px;
+
+  color: #d62828;
+}
+
+.demo-otp strong {
+  color: #d62828;
+
+  font-size: 17px;
+}
+
+
+/* Error */
+
+.otp-error {
+  margin-bottom: 16px;
+
+  color: #d32f2f;
+
+  font-size: 14px;
+}
+
+
+/* Verify */
+
+.verify-otp-button {
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #0aad4b;
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.verify-otp-button:hover {
+  background: #089b42;
+}
+
+
+/* Back */
+
+.otp-back-button {
+  margin-top: 20px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #555;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.otp-back-button:hover {
+  color: #0aad4b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .admin-reset-otp-card {
+    padding: 30px 20px;
+  }
+
+  .otp-inputs {
+    gap: 6px;
+  }
+
+  .otp-inputs input {
+    width: 42px;
+    height: 48px;
+  }
+}
