@@ -1,6 +1,6 @@
 import "../styles/product-card.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function getImageUrl(image) {
   if (!image) {

@@ -88,7 +88,7 @@ function LoginModal() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/auth/send-otp", {
+      const response = await fetch("http://65.0.32.187:5000/api/auth/send-otp", {
         method: "POST",
 
         headers: {
@@ -192,7 +192,7 @@ function LoginModal() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/verify-otp",
+        "http://65.0.32.187:5000/api/auth/verify-otp",
         {
           method: "POST",
 
@@ -254,7 +254,7 @@ function LoginModal() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/auth/send-otp", {
+      const response = await fetch("http://65.0.32.187:5000/api/auth/send-otp", {
         method: "POST",
 
         headers: {

@@ -7,7 +7,7 @@ import ProductCarousel from "../components/ProductCarousel";
 
 import "../styles/home.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function Home() {
   const [products, setProducts] = useState([]);

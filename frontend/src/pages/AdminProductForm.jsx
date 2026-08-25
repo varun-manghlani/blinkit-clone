@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import "../styles/admin-product-form.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function AdminProductForm() {
   const { productId } = useParams();

@@ -5,7 +5,7 @@ import CategoryCard from "./CategoryCard";
 
 import "../styles/categories.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function Categories() {
   const navigate = useNavigate();

@@ -33,7 +33,7 @@ function AdminResetOtp() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/verify-reset-otp",
+        "http://65.0.32.187:5000/api/admin/verify-reset-otp",
         {
           method: "POST",
 

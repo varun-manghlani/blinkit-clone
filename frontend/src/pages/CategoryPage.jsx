@@ -6,7 +6,7 @@ import QuickAddModal from "../components/QuickAddModal";
 
 import "../styles/category-page.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function CategoryPage() {
   const { category } = useParams();

@@ -53,7 +53,7 @@ function ResetPassword() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/reset-password",
+        "http://65.0.32.187:5000/api/admin/reset-password",
         {
           method: "POST",
 

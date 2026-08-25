@@ -34,7 +34,7 @@ function AdminSettings() {
       setLoading(true);
       setError("");
 
-      const response = await fetch("http://localhost:5000/api/admin");
+      const response = await fetch("http://65.0.32.187:5000/api/admin");
 
       const data = await response.json();
 
@@ -120,7 +120,7 @@ function AdminSettings() {
     try {
       setFormLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/admin", {
+      const response = await fetch("http://65.0.32.187:5000/api/admin", {
         method: "POST",
 
         headers: {
@@ -211,7 +211,7 @@ function AdminSettings() {
       console.log("Updating admin:", adminId);
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/${adminId}`,
+        `http://65.0.32.187:5000/api/admin/${adminId}`,
         {
           method: "PUT",
 
@@ -270,7 +270,7 @@ function AdminSettings() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/${adminId}`,
+        `http://65.0.32.187:5000/api/admin/${adminId}`,
         {
           method: "DELETE",
         },

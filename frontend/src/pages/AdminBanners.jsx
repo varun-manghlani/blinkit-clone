@@ -11,7 +11,7 @@ function AdminBanners() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = "http://65.0.32.187:5000";
 
   useEffect(() => {
     fetchBanner();

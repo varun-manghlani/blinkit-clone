@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/admin-promo-cards.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "http://65.0.32.187:5000";
 
 function AdminPromoCards() {
   const navigate = useNavigate();
