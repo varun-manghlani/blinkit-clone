@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { useCart } from "../context/CartContext";
 import "../styles/promo-page.css";
 
 const API_URL = "http://65.0.32.187:5000";
@@ -12,6 +12,7 @@ function PromoPage() {
   const [promoCard, setPromoCard] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchPromoCard = async () => {
@@ -145,7 +146,15 @@ function PromoPage() {
                   onClick={(event) => {
                     event.stopPropagation();
 
-                    console.log("Add product:", product.name);
+                    const cartProduct = {
+                      ...product,
+                      id: product.productId || product._id,
+                      selectedUnit: product.quantity,
+                    };
+
+                    addToCart(cartProduct);
+
+                    console.log("Added to cart:", cartProduct);
                   }}
                 >
                   ADD

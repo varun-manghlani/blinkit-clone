@@ -1,6 +1,10 @@
 import "../styles/quick-add-modal.css";
 
+import { useCart } from "../context/CartContext";
+
 function QuickAddModal({ product, onClose }) {
+  const { addToCart } = useCart();
+
   if (!product) {
     return null;
   }
@@ -21,11 +25,26 @@ function QuickAddModal({ product, onClose }) {
   ];
 
   const handleAdd = (unit) => {
-    console.log("Added:", {
+    addToCart({
+      ...product,
+
+      // CartContext needs a consistent id
+      id: product.productId || product.id || product._id,
+
+      // Important: selected unit distinguishes variants
+      selectedUnit: unit.quantity,
+
+      // Use the selected unit's price
+      price: unit.price,
+    });
+
+    console.log("Added to cart:", {
       product: product.name,
       quantity: unit.quantity,
       price: unit.price,
     });
+
+    onClose();
   };
 
   return (
@@ -55,10 +74,12 @@ function QuickAddModal({ product, onClose }) {
 
               <div className="unit-price">
                 <strong>₹{unit.price}</strong>
+
                 <del>₹{unit.mrp}</del>
               </div>
 
               <button
+                type="button"
                 className="unit-add-button"
                 onClick={() => handleAdd(unit)}
               >

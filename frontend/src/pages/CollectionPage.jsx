@@ -145,8 +145,20 @@ function CollectionPage() {
         {collectionProducts.map((product) => (
           <ProductCard
             key={product.productId}
-            product={product}
-            onAdd={() => addToCart(product)}
+            product={{
+              ...product,
+              id: product.productId,
+              selectedUnit: product.quantity,
+            }}
+            onAdd={() => {
+              console.log("PROMO ADD CLICKED", product);
+
+              addToCart({
+                ...product,
+                id: product.productId,
+                selectedUnit: product.quantity,
+              });
+            }}
             onProductClick={() => navigate(`/product/${product.productId}`)}
           />
         ))}
