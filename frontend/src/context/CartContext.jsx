@@ -61,6 +61,14 @@ export function CartProvider({ children }) {
     );
   };
 
+  // ==========================================
+  // CLEAR CART AFTER SUCCESSFUL PAYMENT
+  // ==========================================
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
     0,
@@ -78,6 +86,7 @@ export function CartProvider({ children }) {
         addToCart,
         increaseQuantity,
         decreaseQuantity,
+        clearCart,
         totalItems,
         itemsTotal,
       }}
@@ -90,3 +99,4 @@ export function CartProvider({ children }) {
 export function useCart() {
   return useContext(CartContext);
 }
+

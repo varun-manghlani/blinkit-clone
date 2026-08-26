@@ -1,12 +1,18 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
+import { useCart } from "../context/CartContext";
+
 import "../styles/PaymentPage.css";
 
 function PaymentPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Get cart functions from CartContext
+  const { clearCart } = useCart();
+
+  // Get checkout data passed from previous page
   const { address, cartItems, grandTotal } = location.state || {};
 
   const [paymentLoading, setPaymentLoading] = useState(false);
@@ -86,20 +92,17 @@ function PaymentPage() {
       // Create Razorpay Order
       // ----------------------------------------
 
-      const response = await fetch(
-        "http://localhost:5000/api/payment/create-order",
-        {
-          method: "POST",
+      const response = await fetch("/api/payment/create-order", {
+        method: "POST",
 
-          headers: {
-            "Content-Type": "application/json",
-          },
-
-          body: JSON.stringify({
-            amount: Number(grandTotal),
-          }),
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+
+        body: JSON.stringify({
+          amount: Number(grandTotal),
+        }),
+      });
 
       const data = await response.json();
 
@@ -126,6 +129,10 @@ function PaymentPage() {
 
         order_id: data.orderId,
 
+        // ======================================
+        // PAYMENT SUCCESS HANDLER
+        // ======================================
+
         handler: async function (paymentResponse) {
           try {
             console.log("Payment response:", paymentResponse);
@@ -134,24 +141,21 @@ function PaymentPage() {
             // Verify payment
             // ----------------------------------
 
-            const verifyResponse = await fetch(
-              "http://localhost:5000/api/payment/verify",
-              {
-                method: "POST",
+            const verifyResponse = await fetch("/api/payment/verify", {
+              method: "POST",
 
-                headers: {
-                  "Content-Type": "application/json",
-                },
-
-                body: JSON.stringify({
-                  razorpay_order_id: paymentResponse.razorpay_order_id,
-
-                  razorpay_payment_id: paymentResponse.razorpay_payment_id,
-
-                  razorpay_signature: paymentResponse.razorpay_signature,
-                }),
+              headers: {
+                "Content-Type": "application/json",
               },
-            );
+
+              body: JSON.stringify({
+                razorpay_order_id: paymentResponse.razorpay_order_id,
+
+                razorpay_payment_id: paymentResponse.razorpay_payment_id,
+
+                razorpay_signature: paymentResponse.razorpay_signature,
+              }),
+            });
 
             const verifyData = await verifyResponse.json();
 
@@ -163,9 +167,39 @@ function PaymentPage() {
 
             console.log("Payment verified:", verifyData);
 
+            // ==================================
+            // IMPORTANT:
+            // CLEAR CART AFTER PAYMENT
+            // ==================================
+
+            /*
+             * Payment has been successfully verified
+             * by the backend.
+             *
+             * Now we clear the actual CartContext.
+             *
+             * We do this ONLY after verification.
+             *
+             * If payment fails or is cancelled,
+             * the cart will remain untouched.
+             */
+
+            clearCart();
+
+            console.log("Cart cleared after payment");
+
             // ----------------------------------
             // Payment Success
             // ----------------------------------
+
+            /*
+             * We still pass cartItems to the success
+             * page so that it can display what the
+             * customer purchased.
+             *
+             * Clearing CartContext does NOT remove
+             * this navigation state.
+             */
 
             navigate("/payment-success", {
               state: {
@@ -191,19 +225,35 @@ function PaymentPage() {
           }
         },
 
+        // ======================================
+        // PREFILL
+        // ======================================
+
         prefill: {
           name: "",
           email: "",
           contact: "",
         },
 
+        // ======================================
+        // NOTES
+        // ======================================
+
         notes: {
           address_type: address.type || "Home",
         },
 
+        // ======================================
+        // THEME
+        // ======================================
+
         theme: {
           color: "#0b8f2c",
         },
+
+        // ======================================
+        // MODAL
+        // ======================================
 
         modal: {
           ondismiss: function () {
@@ -217,6 +267,10 @@ function PaymentPage() {
       // ----------------------------------------
 
       const razorpay = new window.Razorpay(options);
+
+      // ----------------------------------------
+      // PAYMENT FAILED
+      // ----------------------------------------
 
       razorpay.on("payment.failed", function (response) {
         console.error("Razorpay payment failed:", response);
@@ -387,10 +441,7 @@ function PaymentPage() {
                 className="summary-product"
                 key={`${item.id}-${item.selectedUnit}`}
               >
-                <img
-                  src={`http://localhost:5000${item.image}`}
-                  alt={item.name}
-                />
+                <img src={item.image} alt={item.name} />
 
                 <div className="summary-product-info">
                   <div className="summary-product-name">{item.name}</div>
