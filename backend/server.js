@@ -12,6 +12,7 @@ const promoCardRoutes = require("./routes/promoCardRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const adminCategoryRoutes = require("./routes/adminCategoryRoutes");
 const adminProductRoutes = require("./routes/adminProductRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
 
 app.use(cors());
 
@@ -27,6 +28,7 @@ app.use("/api/promo-cards", promoCardPublicRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/admin/categories", adminCategoryRoutes);
 app.use("/api/admin/products", adminProductRoutes);
+app.use("/api/payment", paymentRoutes);
 
 app.get("/", (req, res) => {
   res.json({

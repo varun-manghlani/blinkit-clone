@@ -1,0 +1,478 @@
+/* =========================================
+   BLINKIT FOOTER
+========================================= */
+
+.blinkit-footer {
+  width: 100%;
+
+  background: #ffffff;
+
+  color: #666666;
+
+  margin-top: 60px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
+  width: 100%;
+
+  max-width: 1550px;
+
+  margin: 0 auto;
+
+  padding: 65px 70px 55px;
+
+  display: grid;
+
+  grid-template-columns: 480px 1fr;
+
+  column-gap: 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.footer-section h2 {
+  margin: 0 0 28px;
+
+  color: #222222;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   USEFUL LINKS
+========================================= */
+
+.useful-section {
+  min-width: 0;
+}
+
+.footer-link-columns {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  column-gap: 35px;
+}
+
+.footer-link-columns > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.footer-link-columns span {
+  color: #777777;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories-section {
+  min-width: 0;
+}
+
+.categories-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  margin-bottom: 28px;
+}
+
+.categories-heading h2 {
+  margin: 0;
+}
+
+.see-all {
+  color: #0b8f2c;
+
+  font-size: 18px;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   CATEGORY COLUMNS
+========================================= */
+
+.category-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(170px, 1fr));
+
+  column-gap: 55px;
+}
+
+.category-columns > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.category-columns span {
+  color: #777777;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  background: #fafafa;
+
+  padding: 25px 70px;
+
+  box-sizing: border-box;
+}
+
+.footer-bottom-content {
+  max-width: 1550px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-copyright {
+  color: #777777;
+
+  font-size: 16px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   DOWNLOAD APP
+========================================= */
+
+.footer-download {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+.footer-download > strong {
+  color: #666666;
+
+  font-size: 17px;
+
+  white-space: nowrap;
+}
+
+.store-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.store-button {
+  width: 145px;
+
+  height: 48px;
+
+  background: #17344b;
+
+  border-radius: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.store-icon {
+  font-size: 23px;
+
+  line-height: 1;
+}
+
+.store-button div {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.05;
+}
+
+.store-button small {
+  font-size: 8px;
+
+  color: #ffffff;
+}
+
+.store-button strong {
+  font-size: 14px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.footer-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.footer-social span {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #222222;
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   DISCLAIMER
+========================================= */
+
+.footer-disclaimer {
+  max-width: 1550px;
+
+  margin: 0 auto;
+
+  padding: 18px 70px 25px;
+
+  color: #777777;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    row-gap: 55px;
+
+    padding-left: 45px;
+
+    padding-right: 45px;
+  }
+
+  .footer-bottom {
+    padding-left: 45px;
+
+    padding-right: 45px;
+  }
+
+  .footer-bottom-content {
+    flex-wrap: wrap;
+  }
+
+  .footer-disclaimer {
+    padding-left: 45px;
+
+    padding-right: 45px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .blinkit-footer {
+    margin-top: 40px;
+  }
+
+  .footer-main {
+    padding: 40px 22px;
+
+    row-gap: 40px;
+  }
+
+  .footer-section h2 {
+    font-size: 20px;
+  }
+
+  .footer-link-columns {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+  .footer-link-columns span,
+  .category-columns span {
+    font-size: 15px;
+  }
+
+  .category-columns {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .footer-bottom {
+    padding: 25px 22px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+  .footer-copyright {
+    white-space: normal;
+
+    font-size: 14px;
+  }
+
+  .footer-download {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .store-buttons {
+    flex-wrap: wrap;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-social span {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+  .footer-disclaimer {
+    padding: 18px 22px 25px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .footer-link-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .category-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}

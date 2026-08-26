@@ -4,6 +4,8 @@ import { useAuth } from "../context/AuthContext";
 
 import "../styles/LoginModal.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function LoginModal() {
   const { showLogin, closeLogin } = useAuth();
 
@@ -88,7 +90,7 @@ function LoginModal() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://65.0.32.187:5000/api/auth/send-otp", {
+      const response = await fetch(`${API_URL}/api/auth/send-otp`, {
         method: "POST",
 
         headers: {
@@ -191,22 +193,19 @@ function LoginModal() {
     try {
       setLoading(true);
 
-      const response = await fetch(
-        "http://65.0.32.187:5000/api/auth/verify-otp",
-        {
-          method: "POST",
+      const response = await fetch(`${API_URL}/api/auth/verify-otp`, {
+        method: "POST",
 
-          headers: {
-            "Content-Type": "application/json",
-          },
-
-          body: JSON.stringify({
-            phone: `+91${phone}`,
-
-            otp: enteredOTP,
-          }),
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+
+        body: JSON.stringify({
+          phone: `+91${phone}`,
+
+          otp: enteredOTP,
+        }),
+      });
 
       const data = await response.json();
 
@@ -222,6 +221,7 @@ function LoginModal() {
 
       // Store JWT
       localStorage.setItem("token", data.token);
+      window.dispatchEvent(new Event("auth-change"));
 
       // Store user information
       localStorage.setItem("user", JSON.stringify(data.user));
@@ -254,7 +254,7 @@ function LoginModal() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://65.0.32.187:5000/api/auth/send-otp", {
+      const response = await fetch(`${API_URL}/api/auth/send-otp`, {
         method: "POST",
 
         headers: {
@@ -282,6 +282,8 @@ function LoginModal() {
 
       otpRefs.current[0]?.focus();
     } catch (error) {
+      console.error("Resend OTP error:", error);
+
       setError(error.message || "Failed to resend OTP");
     } finally {
       setLoading(false);

@@ -517,6 +517,183 @@
   font-weight: 500;
 }
 
+.address-content {
+  padding-bottom: 30px;
+}
+
+.address-form {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+}
+
+.address-form h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.address-subtitle {
+  margin: 0 0 25px;
+  color: #777;
+  font-size: 16px;
+}
+
+.address-form label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.address-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.address-form input:focus {
+  border-color: #0c8f2c;
+}
+
+.address-type-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.address-type {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.address-type.active {
+  background: #0c8f2c;
+  color: white;
+  border-color: #0c8f2c;
+}
+
+.address-error {
+  color: #e53935;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.save-address-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #0c8f2c;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-address-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.saved-address-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+}
+
+.saved-address-success {
+  color: #0c8f2c;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.saved-address-card h2 {
+  margin-bottom: 15px;
+}
+
+.saved-address-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.saved-address-card .checkout-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* =========================================
+   ADDRESS SCREEN
+========================================= */
+
+.address-content {
+  padding: 32px;
+  background: #f5f6fa;
+}
+
+.saved-address-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 42px 48px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 760px;
+  box-sizing: border-box;
+}
+
+.saved-address-success {
+  color: #0b8f2c;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.saved-address-card h2 {
+  font-size: 48px;
+  margin: 0 0 35px;
+  color: #222;
+}
+
+.saved-address-card p {
+  font-size: 27px;
+  line-height: 1.5;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* Proceed to Pay */
+
+.proceed-payment-button {
+  width: 100%;
+  margin-top: 40px;
+  padding: 22px 30px;
+  border: none;
+  border-radius: 18px;
+  background: #0b8f2c;
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.proceed-payment-button:hover {
+  background: #087b25;
+}
+
+.proceed-payment-button:active {
+  transform: scale(0.98);
+}
+
 
 /* =========================================
    MOBILE

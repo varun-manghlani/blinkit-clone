@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import PromoCards from "../components/PromoCards";
 import Categories from "../components/Categories";
@@ -89,6 +89,8 @@ function Home() {
             products={row3}
             viewAllPath="/collection/bakery-household"
           />
+
+          <Footer />
         </>
       )}
     </main>

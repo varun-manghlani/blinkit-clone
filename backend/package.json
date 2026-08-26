@@ -18,6 +18,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.0",
     "multer": "^2.2.0",
+    "razorpay": "^2.9.8",
     "twilio": "^5.10.3"
   },
   "devDependencies": {

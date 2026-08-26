@@ -1,0 +1,305 @@
+/* =========================================
+   PAYMENT SUCCESS PAGE
+========================================= */
+
+.payment-success-page {
+  min-height: 90vh;
+  width: 100%;
+
+  background: #f5f6fa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   SUCCESS CARD
+========================================= */
+
+.payment-success-card {
+  width: 100%;
+  max-width: 600px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 45px 45px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   SUCCESS ICON
+========================================= */
+
+.success-icon-wrapper {
+  width: 105px;
+  height: 105px;
+
+  margin: 0 auto 28px;
+
+  border-radius: 50%;
+
+  background: #e8f8ed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.success-icon {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 10px;
+
+  background: #42d58a;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 44px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  box-shadow: 0 4px 10px rgba(0, 150, 70, 0.2);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.payment-success-card h1 {
+  margin: 0;
+
+  font-size: 40px;
+
+  font-weight: 800;
+
+  color: #0b922f;
+}
+
+
+.success-message {
+  margin: 15px 0 25px;
+
+  font-size: 19px;
+
+  color: #667085;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DELIVERY MESSAGE
+========================================= */
+
+.delivery-success-box {
+  width: 100%;
+
+  margin: 0 auto 28px;
+
+  padding: 15px 18px;
+
+  box-sizing: border-box;
+
+  border-radius: 14px;
+
+  background: #effaf2;
+
+  color: #0b922f;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+
+.delivery-icon {
+  font-size: 27px;
+}
+
+
+.delivery-success-box strong {
+  font-weight: 800;
+}
+
+
+/* =========================================
+   PAYMENT DETAILS
+========================================= */
+
+.payment-details {
+  margin: 15px auto 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+.payment-detail-row {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+}
+
+
+.payment-detail-row strong {
+  color: #171717;
+
+  font-weight: 800;
+}
+
+
+.payment-detail-row span {
+  color: #667085;
+
+  word-break: break-word;
+}
+
+
+/* =========================================
+   CONTINUE SHOPPING
+========================================= */
+
+.continue-shopping-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 13px;
+
+  padding: 17px 20px;
+
+  background: #07952c;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.continue-shopping-button:hover {
+  background: #078326;
+
+  transform: translateY(-1px);
+}
+
+
+.continue-shopping-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .payment-success-page {
+    padding: 20px 12px;
+  }
+
+  .payment-success-card {
+    max-width: 500px;
+
+    padding: 35px 22px;
+
+    border-radius: 20px;
+  }
+
+  .success-icon-wrapper {
+    width: 85px;
+    height: 85px;
+
+    margin-bottom: 22px;
+  }
+
+  .success-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 36px;
+  }
+
+  .payment-success-card h1 {
+    font-size: 31px;
+  }
+
+  .success-message {
+    font-size: 16px;
+
+    margin: 12px 0 20px;
+  }
+
+  .delivery-success-box {
+    font-size: 16px;
+
+    padding: 13px 10px;
+  }
+
+  .delivery-icon {
+    font-size: 24px;
+  }
+
+  .payment-detail-row {
+    flex-direction: column;
+
+    gap: 2px;
+
+    font-size: 16px;
+  }
+
+  .continue-shopping-button {
+    font-size: 18px;
+
+    padding: 15px;
+  }
+}

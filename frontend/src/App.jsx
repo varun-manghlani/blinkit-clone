@@ -17,12 +17,16 @@ import ProductDetails from "./pages/ProductDetails";
 import PromoPage from "./pages/PromoPage";
 import ResetPassword from "./pages/ResetPassword";
 import SearchPage from "./pages/SearchPage";
+import PaymentPage from "./pages/PaymentPage";
+import PaymentSuccess from "./pages/PaymentSuccess";
 
 import AdminLayout from "./components/AdminLayout";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 import LoginModal from "./components/LoginModal";
 import Navbar from "./components/Navbar";
 
 import { AuthProvider } from "./context/AuthContext";
+
 import AdminProductForm from "./pages/AdminProductForm";
 
 import "./styles/global.css";
@@ -34,15 +38,12 @@ function AppContent() {
 
   return (
     <div className="app">
-      {/* =====================================
-          CUSTOMER NAVBAR
-      ===================================== */}
-
+      {/* Customer Navbar */}
       {!isAdminPage && <Navbar />}
 
       <Routes>
         {/* =====================================
-            CUSTOMER ROUTES
+            CUSTOMER PAGES
         ===================================== */}
 
         <Route path="/" element={<Home />} />
@@ -57,8 +58,13 @@ function AppContent() {
 
         <Route path="/collection/:collection" element={<CollectionPage />} />
 
+        <Route path="/payment" element={<PaymentPage />} />
+
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+
         {/* =====================================
-            ADMIN AUTH ROUTES
+            ADMIN LOGIN / RESET
+            These are PUBLIC
         ===================================== */}
 
         <Route path="/admin/login" element={<AdminLogin />} />
@@ -70,32 +76,31 @@ function AppContent() {
         <Route path="/admin/reset-password" element={<ResetPassword />} />
 
         {/* =====================================
-            ADMIN PANEL
+            EVERYTHING BELOW IS PROTECTED
         ===================================== */}
 
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route path="dashboard" element={<AdminDashboard />} />
+        <Route element={<AdminProtectedRoute />}>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
 
-          <Route path="settings" element={<AdminSettings />} />
+            <Route path="products" element={<AdminProducts />} />
 
-          <Route path="banners" element={<AdminBanners />} />
+            <Route path="products/:productId" element={<AdminProductForm />} />
 
-          <Route path="promo-cards" element={<AdminPromoCards />} />
+            <Route path="categories" element={<AdminCategories />} />
 
-          <Route path="categories" element={<AdminCategories />} />
+            <Route path="promo-cards" element={<AdminPromoCards />} />
 
-          <Route path="products" element={<AdminProducts />} />
-          <Route
-            path="/admin/products/:productId"
-            element={<AdminProductForm />}
-          />
+            <Route path="banners" element={<AdminBanners />} />
+
+            <Route path="orders" element={<div>Orders</div>} />
+
+            <Route path="settings" element={<AdminSettings />} />
+          </Route>
         </Route>
       </Routes>
 
-      {/* =====================================
-          CUSTOMER LOGIN MODAL
-      ===================================== */}
-
+      {/* Customer Login */}
       {!isAdminPage && <LoginModal />}
     </div>
   );
